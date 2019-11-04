@@ -19,8 +19,14 @@ ofxOscSenderReceiver osc;
 testApp.cpp:
 
 void testApp::setup(){
+  // set up read and write at once
   osc.setup(CLIENT_PORT,HOST,SERVER_PORT);
+  // you can now register listeners
   ofAddListener(ofxOscEvent::packetIn, this, &OSCMessenger::onMessageReceived);
+  // and send messages too
+  ofxOscMessage m;
+  m.setAddress("/notify"); m.addIntArg(1);
+  osc.sendMessage(m);
 }
 
 void testApp::onMessageReceived(ofxOscMessage &m){
