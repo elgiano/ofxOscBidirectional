@@ -46,15 +46,15 @@ bool ofxOscSender::setup(const ofxOscSenderSettings &settings){
 	if(osc::UdpSocket::GetUdpBufferSize() == 0){
 	   osc::UdpSocket::SetUdpBufferSize(65535);
 	}
-
+	
 	this->settings = settings;
-
+	
 	// check for empty host
 	if(settings.host == "") {
 		ofLogError("ofxOscSender") << "couldn't create sender to empty host";
 		return false;
 	}
-
+	
 	// create socket
 	osc::UdpTransmitSocket *socket = nullptr;
 	try{
@@ -96,7 +96,7 @@ void ofxOscSender::sendBundle(const ofxOscBundle &bundle){
 		ofLogError("ofxOscSender") << "trying to send with empty socket";
 		return;
 	}
-
+	
 	// setting this much larger as it gets trimmed down to the size its using before being sent.
 	// TODO: much better if we could make this dynamic? Maybe have ofxOscBundle return its size?
 	static const int OUTPUT_BUFFER_SIZE = 327680;

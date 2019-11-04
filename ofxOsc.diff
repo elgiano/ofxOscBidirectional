@@ -1,0 +1,20 @@
+Only in src/: ofxOscBidirectional.h
+Only in src/: ofxOscEvent.cpp
+Only in src/: ofxOscEvent.h
+Only in src/: ofxOscEventListener.h
+Only in ofxOsc/src/: ofxOsc.h
+diff src/ofxOscReceiver.h ofxOsc/src/ofxOscReceiver.h
+92a93,94
+> private:
+>
+96c98
+< private:
+---
+>
+diff src/ofxOscSender.h ofxOsc/src/ofxOscSender.h
+68c68
+< protected:
+---
+> private:
+Only in src/: ofxOscSenderReceiver.cpp
+Only in src/: ofxOscSenderReceiver.h

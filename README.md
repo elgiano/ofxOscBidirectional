@@ -1,7 +1,7 @@
 # ofxOscBidirectional
 ofxOsc fork to get replies to your OSC messages.
 Integrates work from different sources:
-- ofxOsc from openFrameworks 0.10.1
+- ofxOsc from openFrameworks 0.10.1: very minimal changes, only in access level of class members (see ofxOsc.diff if curious)
 - work from [ERASE](http://www.erase.net/projects/ofxSuperCollider/), who created a ofxOsc fork to permit communication to SuperCollider's server, based on an older version of ofxOsc.
 - [ofxOscEvent](https://github.com/satcy/ofxOscEvent), which is included to provide the capability of registering event listeners for OSC replies.
 
