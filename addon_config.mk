@@ -15,7 +15,7 @@
 # and the PG will write to the console the kind of error and in which line it is
 
 meta:
-	ADDON_NAME = ofxOsc
+	ADDON_NAME = ofxOscBidirectional
 	ADDON_DESCRIPTION = Addon for bidirectional communicating with the OSC protocol
 	ADDON_AUTHOR = <elgiano@gmail.com>
 	ADDON_TAGS = "networking"
