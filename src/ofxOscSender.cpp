@@ -10,6 +10,7 @@ using namespace std;
 
 //--------------------------------------------------------------
 ofxOscSender::~ofxOscSender() {
+	sendSocket.release();
 	clear();
 }
 

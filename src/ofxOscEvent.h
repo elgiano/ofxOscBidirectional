@@ -54,6 +54,11 @@ public:
         time = ofGetElapsedTimef();
     }
 
+    virtual ~ofxOscEvent(){
+        disable();
+        waitForThread();
+    }
+
     void setup(int port);
 
     //be true for dispatching per frame from cued osc messages.
